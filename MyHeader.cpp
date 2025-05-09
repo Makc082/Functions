@@ -2,7 +2,6 @@
 #include <Windows.h>
 using namespace std;
 namespace MySpace {
-SetConsoleOutputCP(1251);
 	void PrintArray(int* ar, int size) {
 		for (int i = 0; i < size; ++i) {
 			//ar[i] = rand() % 100;
@@ -13,7 +12,7 @@ SetConsoleOutputCP(1251);
 
 	}
 
-	// ôóíêö³ÿ äëÿ âèäàëåííÿ ïåðøîãî åëåìåíòà ìàñèâó.
+	// функція для видалення першого елемента масиву.
 	int* DeleteFirstElement(int*& ar, int& size) {
 		if (size <= 0) return ar;
 		int* temp = new int[size - 1];
@@ -24,7 +23,7 @@ SetConsoleOutputCP(1251);
 		return ar;
 	}
 
-	// ôóíêö³ÿ äëÿ âèäàëåííÿ îñòàííüîãî åëåìåíòà ìàñèâó.
+	// функція для видалення останнього елемента масиву.
 	int* DeleteEndElement(int*& ar, int& size) {
 		if (size <= 0) return ar;
 		int* temp = new int[size - 1];
@@ -35,7 +34,7 @@ SetConsoleOutputCP(1251);
 		return ar;
 	}
 
-	// ôóíêö³ÿ äëÿ âèäàëåííÿ åëåìåíòà çà ³íäåêñîì.
+	// функція для видалення елемента за індексом.
 	int* DeleteIndexElement(int*& ar, int& size, int index) {
 		if (index >= 0 && index < size) {
 			int* temp = new int[size - 1];
@@ -52,7 +51,7 @@ SetConsoleOutputCP(1251);
 		}
 	}
 
-	// ôóíêö³ÿ äëÿ âèäàëåííÿ âñ³õ åëåìåíò³â ìàñèâó 1.
+	// функція для видалення всіх елементів масиву 1.
 	int* DeleteAllElements(int*& ar, int& size) {
 		if (size < +0) return ar;
 		int* temp = new int[size] {};
@@ -61,7 +60,7 @@ SetConsoleOutputCP(1251);
 		return ar;
 	}
 
-	// ôóíêö³ÿ äëÿ âèäàëåííÿ âñ³õ åëåìåíò³â ìàñèâó 2.
+	// функція для видалення всіх елементів масиву 2.
 	int* DelAllElemens(int*& ar, int& size) {
 		int* temp = new int[size];
 		for (int i = 0; i < size; ++i) {
@@ -72,7 +71,7 @@ SetConsoleOutputCP(1251);
 		return ar;
 	}
 
-	// ôóíêö³ÿ âèäàëåííÿ âñ³õ ïàðíèõ åëåìåíò³â ìàñèâó.
+	// функція видалення всіх парних елементів масиву.
 	int* DelAllEvenElements(int*& ar, int& size) {
 		int* temp = new int[size];
 		int j = 0;
@@ -88,7 +87,7 @@ SetConsoleOutputCP(1251);
 		return ar;
 	}
 
-	// ôóíêö³ÿ âèäàëåííÿ âñ³õ åëåìåíò³â ìàñèâó, ÿê³ á³ëüø³ çà çíà÷åííÿ.
+	// функція видалення всіх елементів масиву, які більші за значення.
 	int* DelAllBigElements(int*& ar, int& size, int value) {
 		int* temp = new int[size];
 		int j = 0;
@@ -104,7 +103,7 @@ SetConsoleOutputCP(1251);
 		return ar;
 	}
 
-	// ôóíêö³ÿ äîäàâàííÿ åëåìåíòà çà ³íäåêñîì.
+	// функція додавання елемента за індексом.
 	int* AddIndexElement(int*& ar, int& size, int index, int value) {
 		if (index >= 0 && index <= size) {
 			int* temp = new int[size + 1];
@@ -121,7 +120,7 @@ SetConsoleOutputCP(1251);
 			return ar;
 		}
 	}
-	// ôóíêö³ÿ çàïîâíåííÿ ïîñë³äîâíèìè ÷èñëàìè â³ä 1 äî N
+	// функція заповнення послідовними числами від 1 до N
 	void FillArray(int*& ar, int& size, int value) {
 		if (size > 0 && size < 1000000) {
 			delete[] ar;
@@ -135,7 +134,7 @@ SetConsoleOutputCP(1251);
 			cout << "Invalid size\n";
 		}
 	}
-	// ôóíêö³ÿ îá÷èñëåííÿ ñåðåäíüîãî àðèôìåòè÷íîãî ìàñèâó.
+	// функція обчислення середнього арифметичного масиву.
 	void AVGArray(int*& ar, int& size) {
 		float sum = 0;
 		for (int i = 0; i < size; ++i) {
@@ -145,7 +144,7 @@ SetConsoleOutputCP(1251);
 		cout << "Average: " << avg << "\n";
 	}
 
-	// ôóíêö³ÿ äëÿ äîáóòêó åëåìåíò³â ìàñèâó.
+	// функція для добутку елементів масиву.
 	int ProductArray(int*& ar, int& size) {
 		int pr = 1;
 		for (int i = 0; i < size; ++i) {
@@ -154,7 +153,7 @@ SetConsoleOutputCP(1251);
 		return pr;
 	}
 
-	// ôóíêö³ÿ ñîðòóâàííÿ ìàñèâó çà çðîñòàííÿì.
+	// функція сортування масиву за зростанням.
 	void SortArray(int*& ar, int& size) {
 		for (int i = 0; i < size - 1; ++i) {
 			for (int j = 0; j < size - i - 1; ++j) {
