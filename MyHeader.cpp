@@ -2,6 +2,7 @@
 #include <Windows.h>
 using namespace std;
 namespace MySpace {
+SetConsoleOutputCP(1251);
 	void PrintArray(int* ar, int size) {
 		for (int i = 0; i < size; ++i) {
 			//ar[i] = rand() % 100;
@@ -12,7 +13,7 @@ namespace MySpace {
 
 	}
 
-	// ôóíêö³ÿ äëÿ âèäàëåííÿ ïåðøîãî åëåìåíòà ìàñèâó.
+	// Ã´Ã³Ã­ÃªÃ¶Â³Ã¿ Ã¤Ã«Ã¿ Ã¢Ã¨Ã¤Ã Ã«Ã¥Ã­Ã­Ã¿ Ã¯Ã¥Ã°Ã¸Ã®Ã£Ã® Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  Ã¬Ã Ã±Ã¨Ã¢Ã³.
 	int* DeleteFirstElement(int*& ar, int& size) {
 		if (size <= 0) return ar;
 		int* temp = new int[size - 1];
@@ -23,7 +24,7 @@ namespace MySpace {
 		return ar;
 	}
 
-	// ôóíêö³ÿ äëÿ âèäàëåííÿ îñòàííüîãî åëåìåíòà ìàñèâó.
+	// Ã´Ã³Ã­ÃªÃ¶Â³Ã¿ Ã¤Ã«Ã¿ Ã¢Ã¨Ã¤Ã Ã«Ã¥Ã­Ã­Ã¿ Ã®Ã±Ã²Ã Ã­Ã­Ã¼Ã®Ã£Ã® Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  Ã¬Ã Ã±Ã¨Ã¢Ã³.
 	int* DeleteEndElement(int*& ar, int& size) {
 		if (size <= 0) return ar;
 		int* temp = new int[size - 1];
@@ -34,7 +35,7 @@ namespace MySpace {
 		return ar;
 	}
 
-	// ôóíêö³ÿ äëÿ âèäàëåííÿ åëåìåíòà çà ³íäåêñîì.
+	// Ã´Ã³Ã­ÃªÃ¶Â³Ã¿ Ã¤Ã«Ã¿ Ã¢Ã¨Ã¤Ã Ã«Ã¥Ã­Ã­Ã¿ Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  Ã§Ã  Â³Ã­Ã¤Ã¥ÃªÃ±Ã®Ã¬.
 	int* DeleteIndexElement(int*& ar, int& size, int index) {
 		if (index >= 0 && index < size) {
 			int* temp = new int[size - 1];
@@ -51,7 +52,7 @@ namespace MySpace {
 		}
 	}
 
-	// ôóíêö³ÿ äëÿ âèäàëåííÿ âñ³õ åëåìåíò³â ìàñèâó 1.
+	// Ã´Ã³Ã­ÃªÃ¶Â³Ã¿ Ã¤Ã«Ã¿ Ã¢Ã¨Ã¤Ã Ã«Ã¥Ã­Ã­Ã¿ Ã¢Ã±Â³Ãµ Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã²Â³Ã¢ Ã¬Ã Ã±Ã¨Ã¢Ã³ 1.
 	int* DeleteAllElements(int*& ar, int& size) {
 		if (size < +0) return ar;
 		int* temp = new int[size] {};
@@ -60,7 +61,7 @@ namespace MySpace {
 		return ar;
 	}
 
-	// ôóíêö³ÿ äëÿ âèäàëåííÿ âñ³õ åëåìåíò³â ìàñèâó 2.
+	// Ã´Ã³Ã­ÃªÃ¶Â³Ã¿ Ã¤Ã«Ã¿ Ã¢Ã¨Ã¤Ã Ã«Ã¥Ã­Ã­Ã¿ Ã¢Ã±Â³Ãµ Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã²Â³Ã¢ Ã¬Ã Ã±Ã¨Ã¢Ã³ 2.
 	int* DelAllElemens(int*& ar, int& size) {
 		int* temp = new int[size];
 		for (int i = 0; i < size; ++i) {
@@ -71,7 +72,7 @@ namespace MySpace {
 		return ar;
 	}
 
-	// ôóíêö³ÿ âèäàëåííÿ âñ³õ ïàðíèõ åëåìåíò³â ìàñèâó.
+	// Ã´Ã³Ã­ÃªÃ¶Â³Ã¿ Ã¢Ã¨Ã¤Ã Ã«Ã¥Ã­Ã­Ã¿ Ã¢Ã±Â³Ãµ Ã¯Ã Ã°Ã­Ã¨Ãµ Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã²Â³Ã¢ Ã¬Ã Ã±Ã¨Ã¢Ã³.
 	int* DelAllEvenElements(int*& ar, int& size) {
 		int* temp = new int[size];
 		int j = 0;
@@ -87,7 +88,7 @@ namespace MySpace {
 		return ar;
 	}
 
-	// ôóíêö³ÿ âèäàëåííÿ âñ³õ åëåìåíò³â ìàñèâó, ÿê³ á³ëüø³ çà çíà÷åííÿ.
+	// Ã´Ã³Ã­ÃªÃ¶Â³Ã¿ Ã¢Ã¨Ã¤Ã Ã«Ã¥Ã­Ã­Ã¿ Ã¢Ã±Â³Ãµ Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã²Â³Ã¢ Ã¬Ã Ã±Ã¨Ã¢Ã³, Ã¿ÃªÂ³ Ã¡Â³Ã«Ã¼Ã¸Â³ Ã§Ã  Ã§Ã­Ã Ã·Ã¥Ã­Ã­Ã¿.
 	int* DelAllBigElements(int*& ar, int& size, int value) {
 		int* temp = new int[size];
 		int j = 0;
@@ -103,7 +104,7 @@ namespace MySpace {
 		return ar;
 	}
 
-	// ôóíêö³ÿ äîäàâàííÿ åëåìåíòà çà ³íäåêñîì.
+	// Ã´Ã³Ã­ÃªÃ¶Â³Ã¿ Ã¤Ã®Ã¤Ã Ã¢Ã Ã­Ã­Ã¿ Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  Ã§Ã  Â³Ã­Ã¤Ã¥ÃªÃ±Ã®Ã¬.
 	int* AddIndexElement(int*& ar, int& size, int index, int value) {
 		if (index >= 0 && index <= size) {
 			int* temp = new int[size + 1];
@@ -120,7 +121,7 @@ namespace MySpace {
 			return ar;
 		}
 	}
-	// ôóíêö³ÿ çàïîâíåííÿ ïîñë³äîâíèìè ÷èñëàìè â³ä 1 äî N
+	// Ã´Ã³Ã­ÃªÃ¶Â³Ã¿ Ã§Ã Ã¯Ã®Ã¢Ã­Ã¥Ã­Ã­Ã¿ Ã¯Ã®Ã±Ã«Â³Ã¤Ã®Ã¢Ã­Ã¨Ã¬Ã¨ Ã·Ã¨Ã±Ã«Ã Ã¬Ã¨ Ã¢Â³Ã¤ 1 Ã¤Ã® N
 	void FillArray(int*& ar, int& size, int value) {
 		if (size > 0 && size < 1000000) {
 			delete[] ar;
@@ -134,7 +135,7 @@ namespace MySpace {
 			cout << "Invalid size\n";
 		}
 	}
-	// ôóíêö³ÿ îá÷èñëåííÿ ñåðåäíüîãî àðèôìåòè÷íîãî ìàñèâó.
+	// Ã´Ã³Ã­ÃªÃ¶Â³Ã¿ Ã®Ã¡Ã·Ã¨Ã±Ã«Ã¥Ã­Ã­Ã¿ Ã±Ã¥Ã°Ã¥Ã¤Ã­Ã¼Ã®Ã£Ã® Ã Ã°Ã¨Ã´Ã¬Ã¥Ã²Ã¨Ã·Ã­Ã®Ã£Ã® Ã¬Ã Ã±Ã¨Ã¢Ã³.
 	void AVGArray(int*& ar, int& size) {
 		float sum = 0;
 		for (int i = 0; i < size; ++i) {
@@ -144,7 +145,7 @@ namespace MySpace {
 		cout << "Average: " << avg << "\n";
 	}
 
-	// ôóíêö³ÿ äëÿ äîáóòêó åëåìåíò³â ìàñèâó.
+	// Ã´Ã³Ã­ÃªÃ¶Â³Ã¿ Ã¤Ã«Ã¿ Ã¤Ã®Ã¡Ã³Ã²ÃªÃ³ Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã²Â³Ã¢ Ã¬Ã Ã±Ã¨Ã¢Ã³.
 	int ProductArray(int*& ar, int& size) {
 		int pr = 1;
 		for (int i = 0; i < size; ++i) {
@@ -153,7 +154,7 @@ namespace MySpace {
 		return pr;
 	}
 
-	// ôóíêö³ÿ ñîðòóâàííÿ ìàñèâó çà çðîñòàííÿì.
+	// Ã´Ã³Ã­ÃªÃ¶Â³Ã¿ Ã±Ã®Ã°Ã²Ã³Ã¢Ã Ã­Ã­Ã¿ Ã¬Ã Ã±Ã¨Ã¢Ã³ Ã§Ã  Ã§Ã°Ã®Ã±Ã²Ã Ã­Ã­Ã¿Ã¬.
 	void SortArray(int*& ar, int& size) {
 		for (int i = 0; i < size - 1; ++i) {
 			for (int j = 0; j < size - i - 1; ++j) {
